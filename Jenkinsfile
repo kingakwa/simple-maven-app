@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'maven 3' // Ensure Maven is configured in Jenkins Global Tools Configuration
+        maven 'maven 3' // Must match what is configured in Jenkins
     }
 
     environment {
@@ -12,7 +12,6 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // This checks out the main branch explicitly
                 git branch: 'main', url: 'https://github.com/kingakwa/simple-maven-app.git'
             }
         }
@@ -33,6 +32,22 @@ pipeline {
             steps {
                 sh 'mvn package'
             }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Application...'
+                sh './deploy.sh'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo '✅ CI/CD pipeline completed successfully!'
+        }
+        failure {
+            echo '❌ Pipeline failed. Check logs for details.'
         }
     }
 }
