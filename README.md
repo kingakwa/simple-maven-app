@@ -42,6 +42,7 @@ Save backup snapshots or AMIs after setup.
 ```
 simple-maven-app/
 ├── Jenkinsfile
+├── deploy.sh
 ├── pom.xml
 └── src/
     ├── main/
@@ -69,6 +70,8 @@ Plugin Name          	             Purpose
 -Maven Integration	                 Allows Jenkins to build Maven projects.
 -JUnit Realtime test reporter        Provides test result visualization for Maven unit tests.
 -Blue Ocean (optional)	              Modern UI for Jenkins Pipelines.
+-ArtifactDeployer (optional)
+-SSH Agent
 ```
 
 ## 🔨 How to Install Plugins:
