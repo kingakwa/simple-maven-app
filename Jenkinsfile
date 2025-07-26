@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'maven 3' // Must match what is configured in Jenkins
+        maven 'maven 3' // Ensure this matches the name in Jenkins global tools
     }
 
     environment {
@@ -36,15 +36,17 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo 'Deploying Application...'
-                sh './deploy.sh'
+                sh '''
+                    chmod +x deploy.sh
+                    ./deploy.sh
+                '''
             }
         }
     }
 
     post {
         success {
-            echo '✅ CI/CD pipeline completed successfully!'
+            echo '✅ Pipeline completed successfully.'
         }
         failure {
             echo '❌ Pipeline failed. Check logs for details.'
