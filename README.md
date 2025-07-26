@@ -2,8 +2,7 @@
 
 ## Architecture diagram
 
-<img width="214" height="214" alt="Image" src="https://github.com/user-attachments/assets/dcef1664-1326-4cdd-be45-d2de45b10387" />
-
+<img width="311" height="209" alt="Image" src="https://github.com/user-attachments/assets/1ebd2fdf-7963-492e-a685-7c54230dd5ec" />
 
 ## Jenkins-server
 Create an Amazon Linux 2 VM instance and call it "jenkins-server"
