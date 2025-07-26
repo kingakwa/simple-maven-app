@@ -114,6 +114,8 @@ Name: `Maven 3       # this name should reflect in the jenkinsfile`
 Uncheck “Install automatically” if you installed Maven manually via terminal (check with mvn -v)
 click `Save`
 
+<img width="786" height="332" alt="Image" src="https://github.com/user-attachments/assets/d356bf45-8e5f-46ed-911e-fe80e17d0f87" />
+
 ## ✅ STEP 4: Run the Pipeline
 Go back to Dashboard → `simple-maven-pipeline`
 
@@ -122,5 +124,8 @@ Click `Build Now`
 ## ✅ STEP 5: See Results
 You’ll see stages: Checkout → Build → Test → Package
 
+<img width="909" height="424" alt="Image" src="https://github.com/user-attachments/assets/9849d7c4-587c-4837-888f-48acb0e98086" />
+
 Click on a build (#1, #2...) → Console Output to see logs
 
+<img width="476" height="414" alt="Image" src="https://github.com/user-attachments/assets/a9bf6d0e-265e-455a-b0ce-7e7393e72f58" />
